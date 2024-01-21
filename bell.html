@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/alarm.css">
+	<title>SCHOOL BELL SYS</title>
+</head>
+<body onload="show();">
+    <div id = "myDiv">
+      <div>
+        <img id = "myImage" src = "ld.gif" class="intro-start">
+        </div>
+    </div>
+    <div id="content" style="display: none;"> 
+	<div>
+		<img src="aravathumb.png" class="logo">
+	</div>
+	 <main>
+		<div class="table clock-wrapper">
+ 			 <div class="cell">
+    				<h2 id="clock" class="clock"></h2>
+    				<center>
+	    				<div class="settings">
+	    					<select id="hours" class="hrs"></select>
+					    	<select id="minutes" class="mins"></select>
+						<select id="seconds" class="sec"></select>
+						<select id="ampm" class="sec">
+						<option value="AM">AM</option>
+						<option value="PM">PM</option>
+					    	</select>
+	    
+	    				<p>
+					      <button id="snooze" class="hide">Snooze</button>
+					      <button id="startstop" class="set">Set Alarm</button>
+	    				</p>
+	    					<a href="index.html">
+	    						<button class="ringtone">Change Ringtone</button>
+	    					</a>
+	    				</div>
+						<p>SCHOOL BELL</p>
+	    			</center>
+					
+  			</div>
+		</div>
+ 	</main>
+</body>
+<script type="text/javascript" src="./js/bell.js"></script>
+<script type = "text/javascript">
+    function show() {
+        document.getElementById("myDiv").style.display="block";
+        setTimeout("hide()", 2000); // 1 wait, change the delay here
+    }
+
+    function hide() {
+        document.getElementById("myDiv").style.display="none";
+        document.getElementById("content").style.display="block";
+    }
+</script>
+</html>
